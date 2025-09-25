@@ -1,0 +1,13 @@
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+  menuentry_id_option=""
+export menuentry_id_option
+menuentry 'Ubuntu' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-5c15d567-95cd-49c8-9fc8-279358414a69' {
+submenu 'Advanced options for Ubuntu' $menuentry_id_option 'gnulinux-advanced-5c15d567-95cd-49c8-9fc8-279358414a69' {
+	menuentry 'Ubuntu, with Linux 6.14.0-29-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-6.14.0-29-generic-advanced-5c15d567-95cd-49c8-9fc8-279358414a69' {
+	menuentry 'Ubuntu, with Linux 6.14.0-29-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-6.14.0-29-generic-recovery-5c15d567-95cd-49c8-9fc8-279358414a69' {
+	menuentry 'Ubuntu, with Linux 6.14.0-28-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-6.14.0-28-generic-advanced-5c15d567-95cd-49c8-9fc8-279358414a69' {
+	menuentry 'Ubuntu, with Linux 6.14.0-28-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-6.14.0-28-generic-recovery-5c15d567-95cd-49c8-9fc8-279358414a69' {
+menuentry "Memory test (memtest86+x64.bin)" --class memtest $menuentry_id_option 'memtest86+' {
+menuentry 'Memory test (memtest86+x64.bin, serial console)' --class memtest $menuentry_id_option 'memtest86+-serial' {
+		menuentry 'UEFI Firmware Settings' $menuentry_id_option 'uefi-firmware' {
