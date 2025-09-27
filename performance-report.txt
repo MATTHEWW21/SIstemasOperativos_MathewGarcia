@@ -1,0 +1,46 @@
+=== System Performance Report ===
+Generated on: Sat Sep 27 05:02:02 AM UTC 2025
+
+=== System Information ===
+Linux OSMathewGS 6.14.0-32-generic #32~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Sep  2 14:21:04 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+=== CPU Information ===
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  3
+On-line CPU(s) list:                     0-2
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 9 8945HS w/ Radeon 780M Graphics
+CPU family:                              25
+Model:                                   117
+
+=== Memory Usage ===
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       1.7Gi       2.1Gi       109Mi       2.1Gi       4.0Gi
+Swap:             0B          0B          0B
+
+=== Disk Usage ===
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           584M  1.6M  582M   1% /run
+/dev/sda2        25G  9.3G   14G  40% /
+tmpfs           2.9G     0  2.9G   0% /dev/shm
+tmpfs           5.0M  8.0K  5.0M   1% /run/lock
+tmpfs           584M  116K  583M   1% /run/user/1000
+
+=== Load Average ===
+ 05:02:02 up  1:17,  1 user,  load average: 0.25, 0.17, 0.11
+
+=== Top 10 CPU Processes ===
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+vboxuser    1937  7.5  8.7 4722772 525008 ?      Ssl  03:44   5:52 /usr/bin/gnome-shell
+vboxuser    2721  1.3  7.6 3245536 456664 ?      Sl   03:45   1:01 /snap/firefox/6836/usr/lib/firefox/firefox
+vboxuser    2691  0.8  1.0 575020 64104 ?        Ssl  03:44   0:39 /usr/libexec/gnome-terminal-server
+vboxuser    3473  0.5  3.6 2628240 215992 ?      Sl   03:45   0:25 /snap/firefox/6836/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43648 -prefMapHandle 1:273886 -jsInitHandle 2:223368 -parentBuildID 20250919050651 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {f973db82-27cc-4b33-8ab8-979e37d69e9a} -parentPid 2721 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/6836/usr/lib/firefox/omni.ja -appomni /snap/firefox/6836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/6836/usr/lib/firefox/browser 7 tab
+vboxuser    3474  0.4  2.4 2540176 144280 ?      Sl   03:45   0:22 /snap/firefox/6836/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43648 -prefMapHandle 1:273886 -jsInitHandle 2:223368 -parentBuildID 20250919050651 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {7bf98505-2076-406c-aae2-a39e810e0d3a} -parentPid 2721 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/6836/usr/lib/firefox/omni.ja -appomni /snap/firefox/6836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/6836/usr/lib/firefox/browser 8 tab
+root        8988  0.4  0.0      0     0 ?        I    04:55   0:01 [kworker/u12:2-kvfree_rcu_reclaim]
+vboxuser    2055  0.4  0.2 388640 12204 ?        Ssl  03:44   0:19 /usr/bin/ibus-daemon --panel disable
+root        7284  0.4  0.0      0     0 ?        I    04:25   0:08 [kworker/u12:3-ext4-rsv-conversion]
+root          41  0.3  0.0      0     0 ?        I    03:44   0:14 [kworker/u12:1-events_unbound]
+vboxuser    2366  0.1  0.1 236768  7412 ?        Sl   03:44   0:07 /usr/libexec/ibus-engine-simple
