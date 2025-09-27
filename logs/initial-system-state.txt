@@ -1,0 +1,55 @@
+vboxuser@OSMathewGS:~/Lab1.5-workpspace/lab1.5-users.services/logs$ whoami
+vboxuser
+vboxuser@OSMathewGS:~/Lab1.5-workpspace/lab1.5-users.services/logs$ id
+uid=1000(vboxuser) gid=1000(vboxuser) groups=1000(vboxuser),27(sudo)
+vboxuser@OSMathewGS:~/Lab1.5-workpspace/lab1.5-users.services/logs$ groups
+vboxuser sudo
+vboxuser@OSMathewGS:~/Lab1.5-workpspace/lab1.5-users.services/logs$ sudo systemctl list-units --type=service --state=running
+[sudo] password for vboxuser: 
+Sep 27 05:50:46 OSMathewGS sudo[12809]: pam_unix(sudo:auth): authentication failure; logname=vboxuser uid=1000 euid=0 tty=/dev/pts/0 ruser=vboxuser rhost=  user=vboxuser
+Sorry, try again.
+[sudo] password for vboxuser: 
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION   >
+  accounts-daemon.service       loaded active running Accounts Servi>
+  apache-htcacheclean.service   loaded active running Disk Cache Cle>
+  apache2.service               loaded active running The Apache HTT>
+  avahi-daemon.service          loaded active running Avahi mDNS/DNS>
+  colord.service                loaded active running Manage, Instal>
+  cron.service                  loaded active running Regular backgr>
+  cups-browsed.service          loaded active running Make remote CU>
+  cups.service                  loaded active running CUPS Scheduler
+  dbus.service                  loaded active running D-Bus System M>
+  fwupd.service                 loaded active running Firmware updat>
+  gdm.service                   loaded active running GNOME Display >
+  gnome-remote-desktop.service  loaded active running GNOME Remote D>
+  kerneloops.service            loaded active running Tool to automa>
+  ModemManager.service          loaded active running Modem Manager
+  NetworkManager.service        loaded active running Network Manager
+  polkit.service                loaded active running Authorization >
+  power-profiles-daemon.service loaded active running Power Profiles>
+  rsyslog.service               loaded active running System Logging>
+  rtkit-daemon.service          loaded active running RealtimeKit Sc>
+  simple-service.service        loaded active running Simple Test Se>
+  snapd.service                 loaded active running Snap Daemon
+  switcheroo-control.service    loaded active running Switcheroo Con>
+lines 1-23Sep 27 05:50:53 OSMathewGS sudo[12809]: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser/Lab1.5-workpspace/lab1.5-users.services/logs ; USER=root ; COMMAND=/usr/bin/systemctl list-units --type=service --state=running
+Sep 27 05:50:53 OSMathewGS sudo[12809]: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+  systemd-journald.service      loaded active running Journal Service
+  systemd-logind.service        loaded active running User Login Man>
+  systemd-oomd.service          loaded active running Userspace Out->
+  systemd-resolved.service      loaded active running Network Name R>
+  systemd-timesyncd.service     loaded active running Network Time S>
+  systemd-udevd.service         loaded active running Rule-based Man>
+  udisks2.service               loaded active running Disk Manager
+  unattended-upgrades.service   loaded active running Unattended Upg>
+  upower.service                loaded active running Daemon for pow>
+  user@1000.service             loaded active running User Manager f>
+  wpa_supplicant.service        loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly l>
+        ACTIVE → The high-level unit activation state, i.e. generali>
+        SUB    → The low-level unit activation state, values depend >
+
+33 loaded units listed.
+lines 18-40/40 (END)
+[16]+  Stopped                 sudo systemctl list-units --type=service --state=running

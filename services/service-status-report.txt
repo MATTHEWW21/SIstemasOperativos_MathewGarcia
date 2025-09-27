@@ -1,0 +1,89 @@
+s$ systemctl status simple-service
+● simple-service.service - Simple Test Service
+     Loaded: loaded (/etc/systemd/system/simple-service.service; ena>
+     Active: active (running) since Sat 2025-09-27 04:42:56 UTC; 53m>
+   Main PID: 8423 (simple-service.)
+      Tasks: 2 (limit: 6901)
+     Memory: 632.0K (peak: 1.4M)
+        CPU: 1.677s
+     CGroup: /system.slice/simple-service.service
+             ├─ 8423 /bin/bash /home/vboxuser/simple-service.sh
+             └─11922 sleep 10
+lines 1-10/10 (END)
+[13]+  Stopped                 systemctl status simple-service
+s$ systemctl status apache 2
+Failed to get unit for PID 2: PID 2 does not belong to any loaded un>
+Unit apache.service could not be found.
+s$ systemctl list-units --type=service
+  UNIT                                     LOAD   ACTIVE SUB     DES>
+  accounts-daemon.service                  loaded active running Acc>
+  alsa-restore.service                     loaded active exited  Sav>
+  apache-htcacheclean.service              loaded active running Dis>
+  apache2.service                          loaded active running The>
+  apparmor.service                         loaded active exited  Loa>
+  apport.service                           loaded active exited  aut>
+  avahi-daemon.service                     loaded active running Ava>
+  colord.service                           loaded active running Man>
+  console-setup.service                    loaded active exited  Set>
+  cron.service                             loaded active running Reg>
+  cups-browsed.service                     loaded active running Mak>
+  cups.service                             loaded active running CUP>
+  dbus.service                             loaded active running D-B>
+  fwupd.service                            loaded active running Fir>
+  gdm.service                              loaded active running GNO>
+  gnome-remote-desktop.service             loaded active running GNO>
+  kerneloops.service                       loaded active running Too>
+  keyboard-setup.service                   loaded active exited  Set>
+  kmod-static-nodes.service                loaded active exited  Cre>
+  ModemManager.service                     loaded active running Mod>
+  NetworkManager-wait-online.service       loaded active exited  Net>
+  NetworkManager.service                   loaded active running Net>
+  openvpn.service                          loaded active exited  Ope>
+  plymouth-quit-wait.service               loaded active exited  Hol>
+  plymouth-read-write.service              loaded active exited  Tel>
+  plymouth-start.service                   loaded active exited  Sho>
+  polkit.service                           loaded active running Aut>
+  power-profiles-daemon.service            loaded active running Pow>
+  rsyslog.service                          loaded active running Sys>
+  rtkit-daemon.service                     loaded active running Rea>
+  setvtrgb.service                         loaded active exited  Set>
+  simple-service.service                   loaded active running Sim>
+  snapd.apparmor.service                   loaded active exited  Loa>
+  snapd.seeded.service                     loaded active exited  Wai>
+  snapd.service                            loaded active running Sna>
+  switcheroo-control.service               loaded active running Swi>
+  sysstat.service                          loaded active exited  Res>
+  systemd-binfmt.service                   loaded active exited  Set>
+  systemd-journal-flush.service            loaded active exited  Flu>
+  systemd-journald.service                 loaded active running Jou>
+  systemd-logind.service                   loaded active running Use>
+  systemd-modules-load.service             loaded active exited  Loa>
+  systemd-oomd.service                     loaded active running Use>
+  systemd-random-seed.service              loaded active exited  Loa>
+  systemd-remount-fs.service               loaded active exited  Rem>
+  systemd-resolved.service                 loaded active running Net>
+  systemd-sysctl.service                   loaded active exited  App>
+  systemd-timesyncd.service                loaded active running Net>
+  systemd-tmpfiles-setup-dev-early.service loaded active exited  Cre>
+  systemd-tmpfiles-setup-dev.service       loaded active exited  Cre>
+  systemd-tmpfiles-setup.service           loaded active exited  Cre>
+  systemd-udev-trigger.service             loaded active exited  Col>
+  systemd-udevd.service                    loaded active running Rul>
+  systemd-update-utmp.service              loaded active exited  Rec>
+  systemd-user-sessions.service            loaded active exited  Per>
+  udisks2.service                          loaded active running Dis>
+  ufw.service                              loaded active exited  Unc>
+  unattended-upgrades.service              loaded active running Una>
+  upower.service                           loaded active running Dae>
+  user-runtime-dir@1000.service            loaded active exited  Use>
+  user@1000.service                        loaded active running Use>
+  wpa_supplicant.service                   loaded active running WPA>
+
+Legend: LOAD   → Reflects whether the unit definition was properly l>
+        ACTIVE → The high-level unit activation state, i.e. generali>
+        SUB    → The low-level unit activation state, values depend >
+
+62 loaded units listed. Pass --all to see loaded but inactive units,>
+To show all installed unit files use 'systemctl list-unit-files'.
+lines 48-70/70 (END)
+[14]+  Stopped                 systemctl list-units --type=service

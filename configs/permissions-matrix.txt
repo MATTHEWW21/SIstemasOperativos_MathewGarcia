@@ -1,0 +1,12 @@
+$ ls -l /shared/
+total 8
+drwxrwx--- 2 root developers 4096 Sep 27 04:05 projects
+drwxrwxr-x 2 root testers    4096 Sep 27 04:06 testing
+$ sudo ls -l /shared/projects/
+total 0
+-rw-rw-r-- 1 alice alice 0 Sep 27 04:04 alice-file.txt
+-rw-rw-r-- 1 bob   bob   0 Sep 27 04:05 bob-file.txt
+$ ls -l /shared/testing/
+total 0
+-rw-rw-r-- 1 charlie charlie 0 Sep 27 04:06 test-file.txt
+

@@ -1,0 +1,6 @@
+ep 27 06:02:58 OSMathewGS sudo[14316]: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser/Lab1.5-workpspace/lab1.5-users.services/logs ; USER=root ; COMMAND=/usr/bin/systemctl start apache2
+Sep 27 06:02:58 OSMathewGS sudo[14316]: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+Sep 27 06:02:58 OSMathewGS sudo[14316]: pam_unix(sudo:session): session closed for user root 
+ep 27 06:04:40 OSMathewGS sudo[14366]: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser/Lab1.5-workpspace/lab1.5-users.services/logs ; USER=root ; COMMAND=/usr/bin/chmod 770 /shared/projects
+Sep 27 06:04:40 OSMathewGS sudo[14366]: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+Sep 27 06:04:40 OSMathewGS sudo[14366]: pam_unix(sudo:session): session closed for user root
