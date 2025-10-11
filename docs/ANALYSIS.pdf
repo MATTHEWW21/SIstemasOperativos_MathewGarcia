@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Scheduler Performance Analysis
 
 ## Test Setup
@@ -29,3 +30,38 @@
 
 ## Conclusions
 The simulator provides insightful, hands-on comparison of scheduling algorithms, aligning results with operating system goals for efficiency and fairness.
+=======
+Performance Analysis of msgbuf Kernel Module
+Introduction
+
+This document presents the methodology and results of performance testing conducted on the msgbuf Linux kernel module. The module implements a character device with synchronized access to an internal message buffer, supporting concurrent reads and writes.
+Testing Methodology
+
+    User-space test programs were used to measure latency and throughput under various levels of concurrency.
+
+    Tests included basic functionality, multi-process concurrent writing, and stress testing with up to 100 simultaneous writers.
+
+    Kernel logs were analyzed to detect errors or warnings during tests.
+
+Results
+
+    The module demonstrated stable operation under concurrent access with no deadlocks or data corruption.
+
+    Read and write latencies remained low and consistent, even under high contention.
+
+    The use of mutexes for buffer access and spinlocks for statistics provided efficient synchronization.
+
+    No kernel errors or warnings were detected in dmesg logs during stress tests.
+
+Analysis
+
+    The design effectively balances safety and performance by separating blocking and non-blocking synchronization.
+
+    The module scales well to dozens of concurrent writers without noticeable degradation.
+
+    Further optimizations could explore finer-grained locks or lock-free data structures for higher scalability.
+
+Conclusion
+
+The msgbuf kernel module meets its design goals for functionality and concurrency robustness. The synchronization mechanisms and /proc interface enable reliable operation and useful introspection under realistic workloads.
+>>>>>>> b65f498 (L2.1-KernelCustom)

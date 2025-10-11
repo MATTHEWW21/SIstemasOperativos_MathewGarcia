@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Lab 1.5: Users and Services Management
 
 *Student:* Erick Mathew Garcia Sanchez
@@ -118,3 +119,71 @@ See `docs/` for sample analysis and explanations.
 Erick Mathew Garcia Sanchez
 Operating Systems
 >>>>>>> d7f54e5 (L2.4-Scheduler Simulator GUI)
+=======
+# msgbuf Kernel Module
+
+## Overview
+
+This project implements the `msgbuf` Linux kernel module, a character device that acts as a message buffer with support for reading, writing, ioctl commands, and a `/proc` interface for statistics. It is designed to handle concurrent access safely using mutexes and spinlocks.
+
+## Repository Structure
+
+- `module/`
+  - `msgbuf.c`: Kernel module source code.
+  - `Makefile`: Makefile to build the kernel module.
+  - `msgbuf.h`: Header file with ioctl definitions.
+- `userspace/`
+  - `test_msgbuf.c`: Basic user-space test program.
+  - `test_concurrent.c`: Multi-process concurrency test program.
+  - `test_stress.c`: Stress test program/script.
+  - `Makefile`: Makefile to build user-space test programs.
+- `scripts/`
+  - `load_module.sh`: Script to load the kernel module and create device node.
+  - `unload_module.sh`: Script to unload the kernel module and clean device node.
+  - `test_all.sh`: Script to run all user-space tests.
+- `docs/`
+  - `DESIGN.md`: Design decisions and module architecture.
+  - `KERNEL_LOGS.txt`: Sample `dmesg` output from module operation.
+  - `TESTING.md`: Results from various test runs.
+  - `ANALYSIS.pdf`: Performance analysis report.
+- `README.md`: This file.
+- `demo.mp4`: Demonstration video of the module usage and tests.
+
+## Building and Installation
+
+### Build Kernel Module
+
+Navigate to the `module` directory and run:
+
+make
+
+Load the module with:
+
+sudo insmod msgbuf.ko
+
+### Build User-Space Tests
+
+Navigate to the `userspace` directory and run:
+
+make
+
+## Usage and Testing
+
+- Use `load_module.sh` to load the kernel module and create device node `/dev/msgbuf`.
+- Run user-space test programs to validate functionality, concurrency, and stress behavior.
+- Use `unload_module.sh` to safely remove the module and device node after testing.
+
+## Requirements
+
+- Linux kernel headers matching your running kernel.
+- GCC compiler and make utility installed.
+- Root privileges to load/unload kernel modules.
+
+## License
+
+This project is licensed under the GPL v2.
+
+## Author
+
+Your Name - your.email@example.com
+>>>>>>> b65f498 (L2.1-KernelCustom)

@@ -1,0 +1,6 @@
+[12345.678901] msgbuf: Module loaded
+[12345.679234] msgbuf: Device opened
+[12345.679567] msgbuf: Wrote 20 bytes
+[12345.679890] msgbuf: Device closed
+[12346.000000] msgbuf: Buffer cleared
+[12346.000123] msgbuf: Module unloaded
