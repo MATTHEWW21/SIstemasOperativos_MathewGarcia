@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lab 1.5: Users and Services Management
 
 *Student:* Erick Mathew Garcia Sanchez
@@ -52,3 +53,68 @@ This lab covered user and group management, service administration with systemd,
 
     Backed up configurations before making changes.
 
+=======
+# CPU Scheduler Simulator
+
+## Overview
+This project is a CPU Scheduler Simulator with both graphical (GTK) and terminal (ncurses) interfaces.  
+It allows users to simulate and compare major CPU scheduling algorithms, visualize process execution with Gantt charts, and analyze essential scheduling metrics.
+
+## Features
+- Simulates FIFO, SJF, STCF, Round Robin, and MLFQ algorithms
+- Workloads can be loaded from file
+- Gantt chart and metrics dashboard
+- Interactive GUI (GTK) and terminal UI (ncurses)
+- Generates performance reports
+
+## Project Structure
+- `src/` : source code modules (simulation, algorithms, metrics, gui, reports)
+- `include/` : header files
+- `tests/` : standalone test programs for testing algorithms and metrics
+- `workloads/` : example input files for process sets
+- `docs/` : design, algorithm, and analysis documentation
+
+## Requirements
+- GCC
+- GTK+3 for GUI (`sudo apt install libgtk-3-dev`)
+- Ncurses for terminal UI (`sudo apt install ncurses-dev`)
+
+## Compiling
+
+To build everything:
+
+make
+To build and run the GTK GUI version:
+
+make scheduler_gtk
+./scheduler_gtk
+
+To build and run the ncurses terminal version:
+
+make scheduler_ncurses
+./scheduler_ncurses
+
+
+To run all algorithm tests:
+
+make tests
+./test_fifo
+./test_sjf
+./test_stcf
+./test_rr
+./test_mlfq
+
+
+To clean all compiled binaries:
+
+make clean
+
+
+## Usage
+Run either interface, select your algorithm, load or input a workload, and view the timeline plus algorithm metrics.  
+See `docs/` for sample analysis and explanations.
+
+## Author
+Erick Mathew Garcia Sanchez
+Operating Systems
+>>>>>>> d7f54e5 (L2.4-Scheduler Simulator GUI)
